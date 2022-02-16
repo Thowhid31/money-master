@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of the document here -->
+    <title>Taka-Tracker</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <!-- bosy starts here -->
+    <h1 class="text-green-700 text-center center text-8xl mt-3 font-bold">Taka Tracker</h1>
+
+        <!-- section starts here -->
+    <section class="mt-8 container mx-auto">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="">
+                <img src="image/taka-tracker.jpg" alt="">
+            </div>
+            <div class="bg-zinc-200 rounded">
+                <div>
+                    <h4 class="mt-2 text-xl font-bold text-center">Income</h4>
+                    <h5 class="font-semibold mt-3 text-center">Income:      <input type="text"></h5>
+                </div>
+
+                <div>
+                    <h4 class="mt-4 text-xl font-bold text-center">Expenses</h4>
+                    <h5 class="font-semibold mt-3 text-center">Expenses: <input type="text"></h5>
+                    <h5 class="font-semibold mt-3 text-center">Rent: <input type="text"></h5>
+                    <h5 class="font-semibold mt-3 text-center">Others: <input type="text"></h5>
+                </div>
+
+                <div class="m-4 text-center">
+                    <button class="bg-blue-400 p-2 rounded-full">Calculate</button>
+                    <h3 class="font-bold mt-2">Total Expenses: </h3>
+                    <h3 class="font-bold mt-2">Balance: </h3>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="font-semibold">Savings: <input class="w-1/4" type="text"> <span>% </span><button class="bg-blue-400 p-1 rounded">Save</button></h2>
+                    <h3 class="font-bold mt-2">Saving Amount: </h3>
+                    <h3 class="m-2 font-bold mt-2">Remaining Balance: </h3>
+
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+
+        <!-- javascript file connect here -->
+    <script src="js/taka.js"></script>
+</body>
+</html>
