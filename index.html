@@ -23,20 +23,24 @@
             <div class="bg-zinc-200 rounded">
                 <div>
                     <h4 class="mt-2 text-xl font-bold text-center">Income</h4>
-                    <h5 class="font-semibold mt-3 text-center">Income:      <input type="text"></h5>
+                    <h5 class="font-semibold mt-3 text-center">Income:  <input id="income-input" type="text"></h5>
                 </div>
 
                 <div>
                     <h4 class="mt-4 text-xl font-bold text-center">Expenses</h4>
-                    <h5 class="font-semibold mt-3 text-center">Expenses: <input type="text"></h5>
-                    <h5 class="font-semibold mt-3 text-center">Rent: <input type="text"></h5>
-                    <h5 class="font-semibold mt-3 text-center">Others: <input type="text"></h5>
+                    <h5  class="font-semibold mt-3 text-center">Food : <input id="food-output" type="text"></h5>
+                    <h5  class="font-semibold mt-3 text-center">Rent: <input id="rent-output" type="text"></h5>
+                    <h5 class="font-semibold mt-3 text-center">Others: <input id="others-output"  type="text"></h5>
                 </div>
 
                 <div class="m-4 text-center">
-                    <button class="bg-blue-400 p-2 rounded-full">Calculate</button>
-                    <h3 class="font-bold mt-2">Total Expenses: </h3>
-                    <h3 class="font-bold mt-2">Balance: </h3>
+                    <button id="calculate-btn" class="bg-blue-400 p-2 rounded">Calculate</button>
+                    <div>
+                        <h3 class="font-bold mt-2">Total Expenses: <span id="expenses-output">00</span></h3>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mt-2">Balance: <span id="balance-output">00</span></h3>
+                    </div>
                 </div>
 
                 <div class="text-center">
@@ -45,8 +49,6 @@
                     <h3 class="m-2 font-bold mt-2">Remaining Balance: </h3>
 
                 </div>
-
-                
             </div>
         </div>
     </section>
