@@ -64,6 +64,24 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     incomeInput.value = '';
 
 
+    
+document.getElementById('save-btn').addEventListener('click', function () {
+    const savingInput = document.getElementById('save-field');
+    const savingInputValue = Number(savingInput.value);
+    const savingAmount = (incomeInput / 100) * savingInputValue;
+    savingInput.innerText = savingAmount;
+    const savingAmountInput = document.getElementById('saving-amount');
+    const savingAmountValue = Number(savingAmountInput.innerText);
+    savingAmountInput.innerText = savingAmount;
+
+    const remBalance = document.getElementById('remaining-balance');
+    const remBalanceValue = Number(remBalance.innerText);
+    const remainingBalance = balance - savingAmount;
+    remBalance.innerText = remainingBalance;
+
+});
+
+
 })
 
 
@@ -89,17 +107,3 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 
 
-
-document.getElementById('save-btn').addEventListener('click', function () {
-    const savingInput = document.getElementById('save-field');
-    const savingInputValue = parseFloat(savingInput.value);
-    const savingAmount = (incomeInput / 100) * savingInputValue;
-    savingInput.innerText = savingAmount;
-    const savingAmountInput = document.getElementById('saving-amount');
-    const savingAmountValue = parseFloat(savingAmountInput.innerText);
-    savingAmountInput.innerText = savingAmount;
-
-    const remBalance = document.getElementById('remaining-balance');
-    const remBalanceValue = parseFloat(remBalance.innerText);
-    const remainingBalance = balance - savingAmount;
-    remBalance.innerText = remainingBalance;
