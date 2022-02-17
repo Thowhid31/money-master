@@ -81,6 +81,10 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
             return alert('Please input valid amount of money in number type');
         }
 
+        if (savingAmount > balance) {
+            alert('Insufficient Balance');
+        }
+
 
     });
 })
