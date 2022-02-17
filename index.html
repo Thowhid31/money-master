@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- title of the document here -->
     <title>Taka-Tracker</title>
+    <!-- Bootsrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -20,7 +22,7 @@
             <div>
                 <img class="rounded" src="image/taka-tracker.jpg" alt="">
             </div>
-            <div class="bg-zinc-200 rounded">
+            <div class=" bg-zinc-200 rounded">
                 <div>
                     <h4 class="mt-2 text-xl font-bold text-center">Income</h4>
                     <h5 class="font-semibold mt-3 text-center">Income:  <input id="income-input" type="text"></h5>
@@ -44,9 +46,9 @@
                 </div>
 
                 <div class="text-center">
-                    <h2 class="font-semibold">Savings: <input class="w-1/4" type="text"> <span>% </span><button class="bg-blue-400 p-1 rounded">Save</button></h2>
-                    <h3 class="font-bold mt-2">Saving Amount: </h3>
-                    <h3 class="m-2 font-bold mt-2">Remaining Balance: </h3>
+                    <h2 class="font-semibold">Savings: <input id="save-field" class="w-1/4" type="text"> <span>% </span><button id="save-btn" class="bg-blue-400 p-1 rounded">Save</button></h2>
+                    <h3 id="saving-amount" class="font-bold mt-2">Saving Amount: </h3>
+                    <h3 id="remaining-balance" class="m-2 font-bold mt-2">Remaining Balance: </h3>
 
                 </div>
             </div>

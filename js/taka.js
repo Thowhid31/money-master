@@ -1,12 +1,9 @@
-// document.getElementById('calculate-btn').addEventListener('click', function(){
-//     const incomeValue = document.getElementById('income-output')
-// })
 
 
 // Define the input value here
 function getInput(inputId) {
     const inputField = document.getElementById(inputId);
-    const inputValue = parseFloat(inputField.value);
+    const inputValue = Number(inputField.value);
     return inputValue;
 
     
@@ -32,14 +29,14 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     if(isNaN(foodInput) || foodInput < 0){
         foodInput.value = '';
-        return alert('Please input valid amount of money in number type')
+        return alert('Please input valid amount of money in number type');
     }
 
     foodInput.value = '';
 
     if(isNaN(clothesInput) || clothesInput < 0){
         clothesInput.value = '';
-        return alert('Please input valid amount of money in number type')
+        return alert('Please input valid amount of money in number type');
     }
 
     clothesInput.value = '';
@@ -48,102 +45,52 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     // total balance define here
     const expensesBalance = document.getElementById('expenses-input');
-    const expensesAmount = parseFloat(expensesBalance.innerText);
+    const expensesAmount = Number(expensesBalance.innerText);
     const totalExpenses = expensesAmount + totalInputAmount;
     expensesBalance.innerText = totalExpenses;
 
     // balance amount define here
     const getBalance = document.getElementById('balance-input');
-    const balanceAmount = parseFloat(getBalance.innerText)
-    const balance = incomeInput - totalExpenses;
+    const balanceAmount = Number(getBalance.innerText)
+    const balance = Number(incomeInput) - Number(totalExpenses);
     getBalance.innerText = balance;
 
     if(balance < 0 || totalExpenses < 0){
-        getBalance.innerText = '0';
-        expensesBalance.innerText = '0';
+        getBalance.innerText = '';
+        expensesBalance.innerText = '';
         return alert('You are cross your Limit');
         
-    } getBalance.innerText = '0';
-    
-
-    
-    
-    
-    
+    } 
+    incomeInput.value = '';
 
 
+// document.getElementById('save-btn').addEventListener('click', function(){
+//     const savingInput = document.getElementById('save-field');
+//     let saveAmount = parseFloat(savingInput);
+
+//     const savings = (saveAmount * Number)/100;
+//     saveAmount = balance - savings;
+// })  
 
 })
 
 
 
 
+function getInputForSave(saveInputId) {
+    const saveSectionField = document.getElementById(saveInputId);
+    const saveSectionValue = Number(saveSectionField.value);
+    return saveSectionValue;
+}
 
 
+document.getElementById('save-btn').addEventListener('click', function () {
+    const saveInput = getInputForSave('save-field');
+    const getBalance = getInputForSave('balance-input');
+    const savingAmount = getInputForSave('saving-amount');
+    const remainingBalance = getInputForSave('remaining-balance');
 
-// function calculateBtn (cost){
-//     const inputValue = document.getElementById(cost + '-input');
-//     const balanceValue = parseFloat(inputValue.value);
+    savingAmountFinal = (getBalance * Number)/100;
 
-//     return balanceValue;
-// }
-
-// document.getElementById('calculate-btn').addEventListener('click', function(){
-//    /*  let incomeValue = document.getElementById('income-input');
-//     let foodValue = document.getElementById('food-input');
-//     let rentValue = document.getElementById('rent-input');
-//     let othersValue = document.getElementById('others-input');
-//     let totalExpenses = document.getElementById('expenses-input');
-//     let balanceOutput = document.getElementById('balance-input'); */
-
-
-//     const incomeInput = calculateBtn('income');
-//     const foodInput = calculateBtn('food-input');
-//     const rentInput = calculateBtn('rent-input');
-//     const othersInput = calculateBtn('others-input');
-
-//     console.log(incomeInput.value);
-
-
-// });
-
-
-
-/* 
-
-
-    if(
-        incomeValue.value == '' || foodValue.value < 0 || rentValue.value < 0 || othersValue.value < 0 || balanceOutput.innerText < 0 || foodValue.value == '' || rentValue.value == '' || othersValue.value == '' || balanceOutput.innerText == ''
-    ){
-        alert('Please input valid number more than 0 and fill all field');
-        return alert;
-    }
-
-    if(balanceOutput.innerText < 0 || totalExpenses.innerText > incomeValue.value){
-        alert('you are cross your limit')
-    }
-
-
-    totalExpenses.innerText = parseFloat(foodValue.value) + parseFloat(rentValue.value) + parseFloat(othersValue.value);
-
-    balanceOutput.innerText = parseFloat(incomeValue.value) - parseFloat(totalExpenses.innerText);
-
-
-    
-
-    incomeValue.value = '';
-    foodValue.value = '';
-    rentValue.value = '';
-    othersValue.value = '';
-
-
-
-
+    getBalance.innerText = savingAmountFinal;
 });
-
-
-
-
- */
-
-
