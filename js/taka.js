@@ -20,6 +20,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const clothesInput = getInput('clothes-input');
     const totalInputAmount = foodInput + rentInput + clothesInput;
 
+        //error handle here
     if(isNaN(incomeInput) || incomeInput < 0){
         incomeInput.value = '';
         return alert('Please input valid amount of money in number type')
@@ -63,7 +64,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     } 
     incomeInput.value = '';
 
-
+    //define the savings part here
     
 document.getElementById('save-btn').addEventListener('click', function () {
     const savingInput = document.getElementById('save-field');
@@ -83,27 +84,3 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
 
 })
-
-
-
-
-// function getInputForSave(saveInputId) {
-//     const saveSectionField = document.getElementById(saveInputId);
-//     const saveSectionValue = Number(saveSectionField.value);
-//     return saveSectionValue;
-// }
-
-
-// document.getElementById('save-btn').addEventListener('click', function () {
-//     const saveInput = getInputForSave('save-field');
-//     const getBalance = getInputForSave('balance-input');
-//     const savingAmount = getInputForSave('saving-amount');
-//     const remainingBalance = getInputForSave('remaining-balance');
-
-//     savingAmountFinal = (getBalance * Number)/100;
-
-//     getBalance.innerText = savingAmountFinal;
-// });
-
-
-
