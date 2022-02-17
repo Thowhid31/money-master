@@ -58,6 +58,14 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const balance = incomeInput - totalExpenses;
     getBalance.innerText = balance;
 
+    if(balance < 0 || totalExpenses < 0){
+        getBalance.innerText = '0';
+        expensesBalance.innerText = '0';
+        return alert('You are cross your Limit');
+        
+    } getBalance.innerText = '0';
+    
+
     
     
     
