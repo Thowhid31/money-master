@@ -64,33 +64,42 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     incomeInput.value = '';
 
 
-// document.getElementById('save-btn').addEventListener('click', function(){
-//     const savingInput = document.getElementById('save-field');
-//     let saveAmount = parseFloat(savingInput);
-
-//     const savings = (saveAmount * Number)/100;
-//     saveAmount = balance - savings;
-// })  
-
 })
 
 
 
 
-function getInputForSave(saveInputId) {
-    const saveSectionField = document.getElementById(saveInputId);
-    const saveSectionValue = Number(saveSectionField.value);
-    return saveSectionValue;
-}
+// function getInputForSave(saveInputId) {
+//     const saveSectionField = document.getElementById(saveInputId);
+//     const saveSectionValue = Number(saveSectionField.value);
+//     return saveSectionValue;
+// }
+
+
+// document.getElementById('save-btn').addEventListener('click', function () {
+//     const saveInput = getInputForSave('save-field');
+//     const getBalance = getInputForSave('balance-input');
+//     const savingAmount = getInputForSave('saving-amount');
+//     const remainingBalance = getInputForSave('remaining-balance');
+
+//     savingAmountFinal = (getBalance * Number)/100;
+
+//     getBalance.innerText = savingAmountFinal;
+// });
+
+
 
 
 document.getElementById('save-btn').addEventListener('click', function () {
-    const saveInput = getInputForSave('save-field');
-    const getBalance = getInputForSave('balance-input');
-    const savingAmount = getInputForSave('saving-amount');
-    const remainingBalance = getInputForSave('remaining-balance');
+    const savingInput = document.getElementById('save-field');
+    const savingInputValue = parseFloat(savingInput.value);
+    const savingAmount = (incomeInput / 100) * savingInputValue;
+    savingInput.innerText = savingAmount;
+    const savingAmountInput = document.getElementById('saving-amount');
+    const savingAmountValue = parseFloat(savingAmountInput.innerText);
+    savingAmountInput.innerText = savingAmount;
 
-    savingAmountFinal = (getBalance * Number)/100;
-
-    getBalance.innerText = savingAmountFinal;
-});
+    const remBalance = document.getElementById('remaining-balance');
+    const remBalanceValue = parseFloat(remBalance.innerText);
+    const remainingBalance = balance - savingAmount;
+    remBalance.innerText = remainingBalance;
